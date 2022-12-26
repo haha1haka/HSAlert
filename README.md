@@ -1,18 +1,16 @@
 # HSAlert
 
-## Features
-
 * HSAlertController is a simple Alert
 
 <br/>
 
 
 
-## Simulation
+# Simulation
 
 ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/106936018/209522543-71720747-c425-4514-b75d-0d213354c5ee.gif)
 
-## Usage
+# Usage
 
 ```swift
 // toast
@@ -37,7 +35,7 @@ HSAlertController(mainTitle: "정말 나가시겠어요?", subTitle: "작성 중
 
 <br/>
 
-## Requirements
+# Requirements
 
 * iOS 13 + 
 
@@ -45,7 +43,7 @@ HSAlertController(mainTitle: "정말 나가시겠어요?", subTitle: "작성 중
 
 <br/>
 
-## Installation
+# Installation
 
 #### Swift Package Manager
 

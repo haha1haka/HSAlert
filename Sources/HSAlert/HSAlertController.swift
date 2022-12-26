@@ -41,13 +41,13 @@ public class HSAlertController: UIView {
      - parameter buttonTextColor:  Constants indicating the type of alert to display.
      - parameter completion:       Executed after tappedCompleteButton .
      */
-    public convenience init(mainTitle: String, subTitle: String, font: UIFont? = nil, buttonColor: UIColor, completion: (()-> Void)? = nil) {
+    public convenience init(mainTitle: String, subTitle: String? = nil, font: UIFont? = nil, buttonTextColor: UIColor? = .black, completion: (()-> Void)? = nil) {
         self.init(frame: .zero)
         self.mainTitle = mainTitle
         self.subTitle = subTitle
         self.font = font
         self.alertButtonStyle = .default
-        self.buttonTextColor = buttonColor
+        self.buttonTextColor = buttonTextColor
         self.completion = completion
     }
     /// convenience init
@@ -92,16 +92,16 @@ extension HSAlertController {
             configureLayout(rootView, buttonStyle: .default)
         case .complete:
             show(type: .complete)
-            configureLayout(rootView, buttonStyle: .complete)
             alertView.addSubview(buttonStackView)
             buttonStackView.addArrangedSubview(completeButton)
+            configureLayout(rootView, buttonStyle: .complete)
         case .cancel:
             show(type: .cancel)
-            configureLayout(rootView, buttonStyle: .cancel)
             alertView.addSubview(subLabel)
             alertView.addSubview(buttonStackView)
             buttonStackView.addArrangedSubview(cancelButton)
             buttonStackView.addArrangedSubview(completeButton)
+            configureLayout(rootView, buttonStyle: .cancel)
         default:
             return
         }
@@ -222,7 +222,7 @@ extension HSAlertController {
         mainLabel.text = mainTitle
         mainLabel.textColor = .black
         mainLabel.textAlignment = .center
-        mainLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        mainLabel.font = font
         
         subLabel.text = subTitle
         subLabel.numberOfLines = 3

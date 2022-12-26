@@ -1,6 +1,6 @@
 # HSAlert
 
-* HSAlertController is a simple Alert
+* HSAlert is a simple Alert
 
 <br/>
 

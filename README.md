@@ -1,5 +1,7 @@
-# HSAlert
 
+
+# HSAlert 
+<img src="https://img.shields.io/badge/Language-Swift-%23F05138"/> <img src="https://img.shields.io/badge/Platform-iOS13%2B-%23FC8019"/> <img src="https://img.shields.io/badge/SPM-compatible-success"/> <img src="https://img.shields.io/badge/License-MIT-inactive"/> <img src="https://img.shields.io/badge/Release-v1.0.1-blue"/>
 * HSAlert is a simple Alert
 
 <br/>
